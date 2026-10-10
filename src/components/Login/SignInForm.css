@@ -1,0 +1,243 @@
+.signin-signup-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow-y: auto;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #f7fcf9 0%, #eef8f3 100%);
+}
+
+.pageCloseBtn {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 33;
+  color: #213b32;
+  background: #fff;
+  border: 1px solid #dbece3;
+  box-shadow: 0 4px 14px rgba(22, 138, 91, 0.12);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.pageCloseBtn:hover {
+  color: #0f6b45;
+  background: #e8f8ef;
+  transform: scale(1.04);
+}
+
+.forms-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1.25rem;
+}
+
+.signIn-singUp {
+  width: min(100%, 560px);
+  padding: 2.5rem 3rem;
+  background: #fff;
+  border: 1px solid rgba(22, 138, 91, 0.12);
+  border-radius: 24px;
+  box-shadow: 0 24px 60px -24px rgba(15, 107, 69, 0.3);
+}
+
+.signin-signup-container form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.signin-signup-container .title {
+  font-size: 2.2rem;
+  color: #213b32;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.input-field {
+  max-width: 420px;
+  width: 100%;
+  background-color: #f2f5f3;
+  margin: 10px 0;
+  height: 55px;
+  border: 1px solid transparent;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-field:focus-within {
+  border-color: #22a06b;
+  box-shadow: 0 0 0 3px rgba(22, 138, 91, 0.12);
+}
+
+.input-field .fIcon {
+  text-align: center;
+  line-height: 53px;
+  color: #7f9189;
+  transition: color 0.2s ease;
+  font-size: 1.1rem;
+}
+
+.input-field:focus-within .fIcon {
+  color: #168a5b;
+}
+
+.input-field input {
+  padding-right: 0.5rem;
+  background-color: transparent !important;
+  border-radius: 55px;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: #213b32;
+  width: 100%;
+}
+
+.input-field input::placeholder {
+  color: #9aa8a2;
+  font-weight: 500;
+}
+
+.iBtn {
+  min-width: 160px;
+  height: 49px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #168a5b;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 14px 0;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.iBtn:hover {
+  background: #0f6b45;
+  transform: translateY(-1px);
+}
+
+.auth-switch-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+.auth-text-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #0f7a4e;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.auth-text-link:hover {
+  color: #0b5d3b;
+  text-decoration: underline;
+}
+
+.auth-link-divider {
+  color: #9aa8a2;
+}
+
+.auth-back-link {
+  margin: 0 0 1rem;
+}
+
+.social-text {
+  padding: 0.7rem 0;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon {
+  height: 46px;
+  width: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.45rem;
+  color: #333;
+  border-radius: 50%;
+  border: 1px solid #333;
+  background: #fff;
+  outline: none;
+  font-size: 1.1rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  border-color: #168a5b;
+  color: #168a5b;
+}
+
+.signInToast {
+  position: fixed;
+  top: 60px;
+  right: 18px;
+  z-index: 123;
+  background: #fff;
+}
+
+.signInToast .toastIcon {
+  height: 1.2rem;
+}
+
+.password-validatity p {
+  line-height: 1.35;
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+
+@media (max-width: 570px) {
+  .forms-container {
+    align-items: flex-start;
+    padding: 4.5rem 1rem 2rem;
+  }
+
+  .signIn-singUp {
+    padding: 2rem 1.25rem;
+    border-radius: 18px;
+  }
+
+  .signin-signup-container .title {
+    font-size: 1.8rem;
+  }
+
+  .signInToast {
+    left: 12px;
+    right: 12px;
+    width: auto;
+  }
+}
