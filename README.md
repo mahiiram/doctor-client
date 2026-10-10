@@ -146,7 +146,7 @@ Leave this terminal running. The API should listen on the port you set (e.g. **5
 In the **project root** (not inside `api/`), create or edit **`.env`**:
 
 ```env
-REACT_APP_API_BASE_URL_LOCAL=http://localhost:5050
+REACT_APP_API_BASE_URL=http://localhost:5050
 ```
 
 Install and run the website:
@@ -169,7 +169,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 | Problem                             | What to try                                                                      |
 | ----------------------------------- | -------------------------------------------------------------------------------- |
-| Frontend cannot reach API           | Check `REACT_APP_API_BASE_URL_LOCAL`, CORS, and that the API is running.         |
+| Frontend cannot reach API           | Check `REACT_APP_API_BASE_URL`, CORS, and that the API is running.               |
 | Database connection failed          | Verify `DATABASE_URL`, password, `sslmode=require`, and Supabase project status. |
 | Prisma errors after pulling changes | Run `npx prisma generate` again; then `db push` or `migrate dev`.                |
 
